@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { reviews } from "@/lib/data/products";
 import { StarRating } from "@/components/ui/StarRating";
+import { stockImage } from "@/lib/utils/image";
 import { Reveal } from "./Reveal";
 
 const featured = reviews.filter((r) => r.verified && r.rating === 5).slice(0, 3);
 
 const ugcImages = [
-  "https://picsum.photos/seed/lume-ugc-1/500/600",
-  "https://picsum.photos/seed/lume-ugc-2/500/600",
-  "https://picsum.photos/seed/lume-ugc-3/500/600",
+  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 14),
+  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 15),
+  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 16),
 ];
 
 export function SocialProof() {

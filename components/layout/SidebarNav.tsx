@@ -6,12 +6,13 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import { useUIStore } from "@/lib/store/ui";
 import { categories } from "@/lib/data/products";
+import { stockImage } from "@/lib/utils/image";
 
 const categoryImages: Record<string, string> = {
-  anillos: "https://picsum.photos/seed/lume-nav-anillos/400/500",
-  collares: "https://picsum.photos/seed/lume-nav-collares/400/500",
-  aros: "https://picsum.photos/seed/lume-nav-aros/400/500",
-  pulseras: "https://picsum.photos/seed/lume-nav-pulseras/400/500",
+  anillos: stockImage(400, 500, ["ring", "jewelry"], 7),
+  collares: stockImage(400, 500, ["necklace", "jewelry"], 8),
+  aros: stockImage(400, 500, ["earrings", "jewelry"], 9),
+  pulseras: stockImage(400, 500, ["bracelet", "jewelry"], 10),
 };
 
 export function SidebarNav() {

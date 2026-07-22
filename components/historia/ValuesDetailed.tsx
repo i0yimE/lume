@@ -1,18 +1,19 @@
 import Image from "next/image";
+import { stockImage } from "@/lib/utils/image";
 
 const values = [
   {
-    image: "https://picsum.photos/seed/lume-valor-materiales/700/500",
+    image: stockImage(700, 500, ["silver", "metal", "jewelry"], 17),
     title: "Materiales con origen conocido",
     text: "Toda la plata y el bronce que usamos son reciclados y refundidos localmente. Los pocos materiales que importamos (como la piedra lunar) vienen de proveedores con certificado de trazabilidad, no de intermediarios anónimos.",
   },
   {
-    image: "https://picsum.photos/seed/lume-valor-lotes/700/500",
+    image: stockImage(700, 500, ["jewelry", "workshop", "craftsman"], 18),
     title: "Producción en lotes chicos",
     text: "No fabricamos para llenar depósitos. Cada modelo se produce en tandas de 30 a 80 unidades, lo que a veces significa listas de espera, pero nunca stock que termina descartado.",
   },
   {
-    image: "https://picsum.photos/seed/lume-valor-empaque/700/500",
+    image: stockImage(700, 500, ["gift", "packaging", "box"], 19),
     title: "Empaque sin plástico",
     text: "Bolsas de algodón reutilizables y cajas de cartón 100% reciclado. Nada que tengas que tirar apenas abrís el paquete.",
   },

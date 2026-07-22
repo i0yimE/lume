@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { stockImage } from "@/lib/utils/image";
 
 export function Hero() {
   return (
     <section className="relative flex h-[88vh] min-h-[560px] items-end overflow-hidden bg-ink">
       <Image
-        src="https://picsum.photos/seed/lume-hero/1600/2000"
+        src={stockImage(1600, 2000, ["jewelry", "model", "fashion"], 1)}
         alt="Modelo usando piezas de joyería LUME"
         fill
         priority

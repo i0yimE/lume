@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/lib/data/products";
+import { stockImage } from "@/lib/utils/image";
 import { Reveal } from "./Reveal";
 
 const categoryImages: Record<string, string> = {
-  anillos: "https://picsum.photos/seed/lume-cat-anillos/700/900",
-  collares: "https://picsum.photos/seed/lume-cat-collares/700/900",
-  aros: "https://picsum.photos/seed/lume-cat-aros/700/900",
-  pulseras: "https://picsum.photos/seed/lume-cat-pulseras/700/900",
+  anillos: stockImage(700, 900, ["ring", "jewelry"], 3),
+  collares: stockImage(700, 900, ["necklace", "jewelry"], 4),
+  aros: stockImage(700, 900, ["earrings", "jewelry"], 5),
+  pulseras: stockImage(700, 900, ["bracelet", "jewelry"], 6),
 };
 
 export function FeaturedCategories() {

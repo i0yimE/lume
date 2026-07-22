@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { stockImage } from "@/lib/utils/image";
 
 export function StoryHero() {
   return (
     <section className="relative flex h-[60vh] min-h-[420px] items-end overflow-hidden bg-ink">
       <Image
-        src="https://picsum.photos/seed/lume-taller/1600/1200"
+        src={stockImage(1600, 1200, ["jewelry", "workshop", "goldsmith"], 2)}
         alt="Taller de orfebrería donde se hacen las piezas LUME"
         fill
         priority
