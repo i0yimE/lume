@@ -1,19 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
+// Sin animación acá a propósito: este wrapper cubre TODO el contenido de
+// cada página. En pruebas, cualquier animación CSS aplicada a este nivel
+// podía quedar "congelada" en su estado inicial (oculta) cuando el render
+// no llega a componer un frame. El contenido de la página nunca debe
+// depender de que una animación corra para ser visible.
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-
-  return (
-    <motion.div
-      key={pathname}
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div key={pathname}>{children}</div>;
 }
