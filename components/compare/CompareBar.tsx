@@ -20,7 +20,7 @@ export function CompareBar() {
       }`}
     >
       <div className="flex w-full max-w-lg items-center gap-3 border border-line bg-bone p-3 shadow-xl">
-        <ul className="flex flex-1 gap-2 overflow-x-auto">
+        <ul className="flex flex-1 gap-3 overflow-x-auto p-2">
           {products.map((product) => (
             <li key={product.id} className="relative shrink-0">
               <div className="relative h-12 w-12 overflow-hidden bg-bone-soft">
@@ -28,10 +28,10 @@ export function CompareBar() {
               </div>
               <button
                 onClick={() => remove(product.id)}
-                className="focus-ring absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink text-bone"
+                className="focus-ring absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-ink text-bone"
                 aria-label={`Quitar ${product.name} de comparación`}
               >
-                <X size={11} />
+                <X size={11} className="shrink-0" />
               </button>
             </li>
           ))}

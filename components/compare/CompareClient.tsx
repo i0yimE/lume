@@ -99,23 +99,16 @@ export function CompareClient() {
         </button>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+      <div className="flex justify-center overflow-x-auto">
+        <table className="min-w-[640px] shrink-0 border-collapse text-left text-sm">
           <thead>
             <tr>
               <th className="sticky left-0 z-10 w-36 bg-bone p-0" />
               {products.map((product) => (
                 <th key={product.id} className="w-56 border-b border-line p-4 align-top font-normal">
-                  <div className="relative">
-                    <button
-                      onClick={() => remove(product.id)}
-                      className="focus-ring absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-bone text-ink/50 shadow hover:text-ink"
-                      aria-label={`Quitar ${product.name} de la comparación`}
-                    >
-                      <X size={14} />
-                    </button>
-                    <Link href={`/producto/${product.slug}`} className="focus-ring block">
-                      <div className="relative aspect-[4/5] overflow-hidden bg-bone-soft">
+                  <div>
+                    <div className="relative aspect-[4/5] overflow-hidden bg-bone-soft">
+                      <Link href={`/producto/${product.slug}`} className="focus-ring block h-full w-full">
                         <Image
                           src={product.images[0]}
                           alt={product.name}
@@ -123,7 +116,16 @@ export function CompareClient() {
                           sizes="220px"
                           className="object-cover"
                         />
-                      </div>
+                      </Link>
+                      <button
+                        onClick={() => remove(product.id)}
+                        className="focus-ring absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink text-bone shadow-md hover:bg-ink-soft"
+                        aria-label={`Quitar ${product.name} de la comparación`}
+                      >
+                        <X size={15} strokeWidth={2.5} />
+                      </button>
+                    </div>
+                    <Link href={`/producto/${product.slug}`} className="focus-ring block">
                       <p className="mt-3 text-sm text-ink">{product.name}</p>
                     </Link>
                     <div className="mt-1 flex items-center gap-2">
