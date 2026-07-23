@@ -5,7 +5,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SidebarNav } from "@/components/layout/SidebarNav";
 import { SearchOverlay } from "@/components/layout/SearchOverlay";
+import { PageLoader } from "@/components/layout/PageLoader";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -32,7 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
+    <html
+      lang="es"
+      data-scroll-behavior="smooth"
+      className={`${fraunces.variable} ${inter.variable} h-full scroll-smooth antialiased`}
+    >
       <body className="flex min-h-full flex-col bg-bone text-ink">
         <a
           href="#main-content"
@@ -40,14 +47,16 @@ export default function RootLayout({
         >
           Saltar al contenido
         </a>
+        <PageLoader />
         <Header />
         <main id="main-content" className="flex-1">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
         <SidebarNav />
         <SearchOverlay />
         <CartDrawer />
+        <ChatWidget />
       </body>
     </html>
   );

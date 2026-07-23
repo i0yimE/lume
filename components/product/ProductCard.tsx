@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
             alt={product.name}
             fill
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-            className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+            className="object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-105 group-hover:opacity-0"
           />
           {product.images[1] && (
             <Image
@@ -25,7 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
               aria-hidden="true"
               fill
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-              className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className="object-cover opacity-0 transition-[opacity,transform] duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
             />
           )}
 

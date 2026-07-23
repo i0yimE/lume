@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { stockImage } from "@/lib/utils/image";
+import { unsplashImage } from "@/lib/utils/image";
 
 export function Hero() {
   return (
     <section className="relative flex h-[88vh] min-h-[560px] items-end overflow-hidden bg-ink">
       <Image
-        src={stockImage(1600, 2000, ["jewelry", "model", "fashion"], 1)}
+        src={unsplashImage("1496203695688-3b8985780d6a", 1600, 2000)}
         alt="Modelo usando piezas de joyería LUME"
         fill
         priority

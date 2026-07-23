@@ -1,20 +1,20 @@
 import Image from "next/image";
-import { stockImage } from "@/lib/utils/image";
-import { Reveal } from "./Reveal";
+import { unsplashImage } from "@/lib/utils/image";
+import { Reveal } from "@/components/ui/Reveal";
 
 const steps = [
   {
-    image: stockImage(1000, 1200, ["silver", "metal", "jewelry"], 11),
+    image: unsplashImage("1655111379423-b85edc4da9ac", 1000, 1200),
     title: "Empezamos por el metal",
     text: "Plata y bronce reciclados, refundidos en un taller a 40 km de Buenos Aires. Nada de minería nueva si podemos evitarla.",
   },
   {
-    image: stockImage(1000, 1200, ["jewelry", "craftsman", "hands"], 12),
+    image: unsplashImage("1655111396188-8dd88ceb8b4d", 1000, 1200),
     title: "Se pule a mano, pieza por pieza",
     text: "Cada anillo, aro o dije pasa entre 40 y 90 minutos de pulido manual antes de salir del taller. Por eso no hacemos miles de unidades iguales.",
   },
   {
-    image: stockImage(1000, 1200, ["gift", "packaging", "box"], 13),
+    image: unsplashImage("1595246007497-15e0ed4b8d96", 1000, 1200),
     title: "Llega sin plástico de más",
     text: "Bolsas de tela reutilizable y cajas de cartón reciclado. Nada que tengas que tirar apenas abrís el paquete.",
   },

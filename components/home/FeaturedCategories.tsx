@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/lib/data/products";
-import { stockImage } from "@/lib/utils/image";
-import { Reveal } from "./Reveal";
+import { unsplashImage } from "@/lib/utils/image";
+import { Reveal } from "@/components/ui/Reveal";
 
 const categoryImages: Record<string, string> = {
-  anillos: stockImage(700, 900, ["ring", "jewelry"], 3),
-  collares: stockImage(700, 900, ["necklace", "jewelry"], 4),
-  aros: stockImage(700, 900, ["earrings", "jewelry"], 5),
-  pulseras: stockImage(700, 900, ["bracelet", "jewelry"], 6),
+  anillos: unsplashImage("1543294001-f7cd5d7fb516", 700, 900),
+  collares: unsplashImage("1506630448388-4e683c67ddb0", 700, 900),
+  aros: unsplashImage("1651160670627-2896ddf7822f", 700, 900),
+  pulseras: unsplashImage("1573408301185-9146fe634ad0", 700, 900),
 };
 
 export function FeaturedCategories() {

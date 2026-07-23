@@ -1,7 +1,7 @@
 import { getBestSellers } from "@/lib/data/products";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Button } from "@/components/ui/Button";
-import { Reveal } from "./Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function BestSellers() {
   const products = getBestSellers(4);

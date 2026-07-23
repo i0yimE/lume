@@ -1,7 +1,5 @@
-// Genera URLs de fotos de stock reales y temáticas (vía LoremFlickr, sin API
-// key) en vez de imágenes aleatorias sin relación con el producto. `lock`
-// fija siempre la misma foto para un mismo valor, para que no cambie en
-// cada build.
-export function stockImage(width: number, height: number, keywords: string[], lock: number) {
-  return `https://loremflickr.com/${width}/${height}/${keywords.join(",")}?lock=${lock}`;
+// Fotos reales curadas de Unsplash (licencia Unsplash: uso libre) en vez de
+// imágenes de stock aleatorias. `id` es el ID de foto de Unsplash.
+export function unsplashImage(id: string, width: number, height: number) {
+  return `https://images.unsplash.com/photo-${id}?w=${width}&h=${height}&fit=crop&auto=format&q=80`;
 }

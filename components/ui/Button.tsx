@@ -40,7 +40,7 @@ export function Button({
   ...props
 }: ButtonProps | LinkButtonProps) {
   const classes = cn(
-    "focus-ring inline-flex items-center justify-center gap-2 tracking-wide uppercase transition-colors duration-200 disabled:opacity-40 disabled:pointer-events-none",
+    "focus-ring inline-flex items-center justify-center gap-2 tracking-wide uppercase transition-all duration-200 active:scale-[0.97] disabled:opacity-40 disabled:pointer-events-none",
     variantClasses[variant],
     sizeClasses[size],
     className

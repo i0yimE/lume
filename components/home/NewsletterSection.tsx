@@ -1,5 +1,5 @@
 import { Newsletter } from "@/components/layout/Newsletter";
-import { Reveal } from "./Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function NewsletterSection() {
   return (

@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { reviews } from "@/lib/data/products";
 import { StarRating } from "@/components/ui/StarRating";
-import { stockImage } from "@/lib/utils/image";
-import { Reveal } from "./Reveal";
+import { unsplashImage } from "@/lib/utils/image";
+import { Reveal } from "@/components/ui/Reveal";
 
 const featured = reviews.filter((r) => r.verified && r.rating === 5).slice(0, 3);
 
 const ugcImages = [
-  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 14),
-  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 15),
-  stockImage(500, 600, ["jewelry", "portrait", "fashion"], 16),
+  unsplashImage("1613966561243-c6959a886009", 500, 600),
+  unsplashImage("1532039956299-1614b86a6d2f", 500, 600),
+  unsplashImage("1689926628786-5eff645e3e23", 500, 600),
 ];
 
 export function SocialProof() {

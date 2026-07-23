@@ -3,6 +3,7 @@ import type { Product } from "@/lib/types";
 import { ProductCard } from "@/components/product/ProductCard";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function ProductGrid({ products }: { products: Product[] }) {
   if (products.length === 0) {
@@ -22,8 +23,10 @@ export function ProductGrid({ products }: { products: Product[] }) {
 
   return (
     <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {products.map((product, i) => (
+        <Reveal key={product.id} delay={(i % 8) * 40}>
+          <ProductCard product={product} />
+        </Reveal>
       ))}
     </div>
   );

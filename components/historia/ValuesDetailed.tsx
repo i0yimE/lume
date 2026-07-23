@@ -1,19 +1,19 @@
 import Image from "next/image";
-import { stockImage } from "@/lib/utils/image";
+import { unsplashImage } from "@/lib/utils/image";
 
 const values = [
   {
-    image: stockImage(700, 500, ["silver", "metal", "jewelry"], 17),
+    image: unsplashImage("1715374033196-0ff662284a7e", 700, 500),
     title: "Materiales con origen conocido",
     text: "Toda la plata y el bronce que usamos son reciclados y refundidos localmente. Los pocos materiales que importamos (como la piedra lunar) vienen de proveedores con certificado de trazabilidad, no de intermediarios anónimos.",
   },
   {
-    image: stockImage(700, 500, ["jewelry", "workshop", "craftsman"], 18),
+    image: unsplashImage("1624588057318-5f1b2eb81012", 700, 500),
     title: "Producción en lotes chicos",
     text: "No fabricamos para llenar depósitos. Cada modelo se produce en tandas de 30 a 80 unidades, lo que a veces significa listas de espera, pero nunca stock que termina descartado.",
   },
   {
-    image: stockImage(700, 500, ["gift", "packaging", "box"], 19),
+    image: unsplashImage("1617825295690-28ae56c56135", 700, 500),
     title: "Empaque sin plástico",
     text: "Bolsas de algodón reutilizables y cajas de cartón 100% reciclado. Nada que tengas que tirar apenas abrís el paquete.",
   },

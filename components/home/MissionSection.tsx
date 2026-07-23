@@ -1,5 +1,5 @@
 import { Leaf, PackageCheck, Hammer } from "lucide-react";
-import { Reveal } from "./Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 const pillars = [
   {
