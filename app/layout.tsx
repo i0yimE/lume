@@ -9,6 +9,7 @@ import { PageLoader } from "@/components/layout/PageLoader";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
+import { CompareBar } from "@/components/compare/CompareBar";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -57,6 +58,7 @@ export default function RootLayout({
         <SearchOverlay />
         <CartDrawer />
         <ChatWidget />
+        <CompareBar />
       </body>
     </html>
   );

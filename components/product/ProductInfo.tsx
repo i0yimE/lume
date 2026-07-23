@@ -3,6 +3,7 @@ import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/utils/format";
 import { StarRating } from "@/components/ui/StarRating";
 import { Badge } from "@/components/ui/Badge";
+import { CompareToggle } from "@/components/compare/CompareToggle";
 import { AddToCartForm } from "./AddToCartForm";
 
 export function ProductInfo({ product }: { product: Product }) {
@@ -29,6 +30,8 @@ export function ProductInfo({ product }: { product: Product }) {
       <p className="text-sm leading-relaxed text-ink/70">{product.shortDescription}</p>
 
       <AddToCartForm product={product} />
+
+      <CompareToggle productId={product.id} size="md" className="self-start" />
 
       <div className="space-y-4 border-t border-line pt-6 text-sm">
         <p className="leading-relaxed text-ink/70">{product.story}</p>

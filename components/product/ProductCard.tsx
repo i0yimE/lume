@@ -4,6 +4,7 @@ import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/utils/format";
 import { StarRating } from "@/components/ui/StarRating";
 import { Badge } from "@/components/ui/Badge";
+import { CompareToggle } from "@/components/compare/CompareToggle";
 import { QuickShop } from "./QuickShop";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -34,6 +35,8 @@ export function ProductCard({ product }: { product: Product }) {
             {product.bestSeller && <Badge tone="ink">Best seller</Badge>}
             {!product.inStock && <Badge tone="outline">Sin stock</Badge>}
           </div>
+
+          <CompareToggle productId={product.id} className="absolute right-2 top-2" />
 
           <QuickShop product={product} />
         </div>
